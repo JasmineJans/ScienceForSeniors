@@ -29,13 +29,16 @@ class Experiment1ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.NextButton.isEnabled = false
-        //self.NextButton.setTitle("Continue to next step", for: UIControl.State.normal)
+       // self.NextButton.setTitle("Continue to next step", for: UIControl.State.normal)
         
         self.loadYeastSteps()
         
-        //self.loadSoapSteps()
+        self.loadSoapSteps()
         
-        //self.loadHPSteps()
+        self.loadHPSteps()
+        
+        //self.NextButton.setTitle("Tap the labels to find out what to do next", for: UIControl.State.normal)
+        self.NextButton.setTitle("Tap the labels to find out what to do next", for: UIControl.State.disabled)
         
         // Load the "soap" scene from the "Experiment" Reality File
         //let soapAnchor = try! Experiment.loadDishSoap()
@@ -73,7 +76,7 @@ class Experiment1ViewController: UIViewController {
 
                 self.yeastSteps = yeastAnchor
                 
-                self.NextButton.setTitle("Find the yeast", for: UIControl.State.disabled)
+                //self.NextButton.setTitle("Find the yeast", for: UIControl.State.disabled)
                 
                 self.setupYeastNotifyActions()
                
@@ -88,8 +91,20 @@ class Experiment1ViewController: UIViewController {
         self.currentScene = "Soap"
         print("in Soap scene")
         
-        self.arExperimentView.scene.anchors.remove(at: 0)
-        Experiment.loadDishSoapAsync {result in
+        //self.arExperimentView.scene.anchors.removeAll()
+        let soapAnchor = try! Experiment.loadDishSoap()
+        // Add the soap anchor to the scene
+        soapAnchor.generateCollisionShapes(recursive: true)
+        arExperimentView.scene.anchors.append(soapAnchor)
+        print("added soap anchor")
+
+        soapSteps = soapAnchor
+        
+        //self.NextButton.setTitle("Find the soap", for: UIControl.State.disabled)
+        
+        self.setupSoapNotifyActions()
+        
+        /*Experiment.loadDishSoapAsync {result in
             switch result{
             case .success(let anchor):
                 let soapAnchor = anchor
@@ -110,13 +125,13 @@ class Experiment1ViewController: UIViewController {
                 print(error)
                 return
             }
-        }
+        }*/
     }
     
     func loadHPSteps(){
         self.currentScene = "HP"
         
-        self.arExperimentView.scene.anchors.remove(at: 0)
+        //self.arExperimentView.scene.anchors.remove(at: 0)
         Experiment.loadHydrogenPeroxideAsync {result in
             switch result{
             case .success(let anchor):
@@ -130,7 +145,7 @@ class Experiment1ViewController: UIViewController {
                 //arExperimentView.scene.anchors.append(hpAnchor)
                 self.hpSteps = hpAnchor
                 
-                self.NextButton.setTitle("Find the Hyd. Perox.", for: UIControl.State.disabled)
+                //self.NextButton.setTitle("Find the Hyd. Perox.", for: UIControl.State.disabled)
                 
                 self.setupHPNotifyActions()
                
@@ -239,19 +254,20 @@ class Experiment1ViewController: UIViewController {
         
         if(currentScene == "Yeast"){
             self.yeastSteps.notifications.continueStep2.post()
-            self.loadSoapSteps()
+            //self.loadSoapSteps()
+            //self.loadHPSteps()
         }
         else if(currentScene == "Soap"){
             self.soapSteps.notifications.continueStep3.post()
-            self.loadHPSteps()
+            //self.loadHPSteps()
         }
         else if(currentScene == "HP"){
             self.hpSteps.notifications.continueFinalSteps.post()
-            self.loadFinalSteps()
+            //self.loadFinalSteps()
         }
         else if(currentScene == "Finish"){
             self.FSteps.notifications.finish.post()
-            self.loadFinish()
+            //self.loadFinish()
         }
         else{
             arExperimentView?.session.pause()

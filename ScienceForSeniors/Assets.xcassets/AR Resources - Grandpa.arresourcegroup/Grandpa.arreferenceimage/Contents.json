@@ -1,6 +1,9 @@
 {
   "images" : [
-
+    {
+      "idiom" : "universal",
+      "filename" : "Grandpa.jpg"
+    }
   ],
   "info" : {
     "version" : 1,

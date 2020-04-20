@@ -7,23 +7,93 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D5CF79024442734002CAA0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D5CF78F24442734002CAA0F /* Assets.xcassets */; };
+		7D5CF792244428C7002CAA0F /* DiscoverScene2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5CF791244428C7002CAA0F /* DiscoverScene2ViewController.swift */; };
 		7D703E4D2419CD3400C498F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D703E4C2419CD3400C498F3 /* AppDelegate.swift */; };
-		7D703E4F2419CD3400C498F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D703E4E2419CD3400C498F3 /* ViewController.swift */; };
-		7D703E512419CD3400C498F3 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 7D703E502419CD3400C498F3 /* Experience.rcproject */; };
+		7D703E4F2419CD3400C498F3 /* Experiment1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D703E4E2419CD3400C498F3 /* Experiment1ViewController.swift */; };
 		7D703E542419CD3400C498F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D703E522419CD3400C498F3 /* Main.storyboard */; };
-		7D703E562419CD3600C498F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D703E552419CD3600C498F3 /* Assets.xcassets */; };
 		7D703E592419CD3600C498F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D703E572419CD3600C498F3 /* LaunchScreen.storyboard */; };
+		7D703E65241C921E00C498F3 /* LearnSciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D703E64241C921E00C498F3 /* LearnSciViewController.swift */; };
+		7D72E4942438FF5600F03668 /* DiscoverScene1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72E4932438FF5600F03668 /* DiscoverScene1ViewController.swift */; };
+		7D72E49E243920DD00F03668 /* GrayHairVideo2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7D72E49D243920DD00F03668 /* GrayHairVideo2.mp4 */; };
+		7D72E4A0243920E800F03668 /* GrayHairVideo1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7D72E49F243920E800F03668 /* GrayHairVideo1.mp4 */; };
+		7D72E4A424394E8800F03668 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D72E4A324394E8800F03668 /* BaseViewController.swift */; };
+		7D72E4A62439509F00F03668 /* AboutExp1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7D72E4A52439509F00F03668 /* AboutExp1.mp3 */; };
+		7D72E4A82439595200F03668 /* HowToExp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7D72E4A72439595200F03668 /* HowToExp.mp3 */; };
+		7D72E4AA243964F400F03668 /* Learn1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7D72E4A9243964F400F03668 /* Learn1.mp3 */; };
+		7D72E4AC2439650800F03668 /* Discover1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7D72E4AB2439650800F03668 /* Discover1.mp3 */; };
+		7D842FAB241C9D07007F4E0B /* LearnSci1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 7D842FAA241C9D07007F4E0B /* LearnSci1.rcproject */; };
+		7D8845D0244BDFF500E0DBFE /* ExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8845CF244BDFF500E0DBFE /* ExperienceViewController.swift */; };
+		7DA46877244CE2080061BB40 /* Tutorial1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 7DA46876244CE2080061BB40 /* Tutorial1.rcproject */; };
+		7DA46879244D00360061BB40 /* Tutorial2.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 7DA46878244D00360061BB40 /* Tutorial2.rcproject */; };
+		7DA4687B244D085D0061BB40 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA4687A244D085D0061BB40 /* AboutAppViewController.swift */; };
+		7DA4D180243AA81E00855DFB /* Experiment.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 7DA4D17F243AA81E00855DFB /* Experiment.rcproject */; };
+		7DCE86502446D74E0096A18C /* AboutContent.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7DCE864C2446D74E0096A18C /* AboutContent.mp3 */; };
+		7DCE86522446D74E0096A18C /* AboutAR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7DCE864E2446D74E0096A18C /* AboutAR.mp3 */; };
+		7DCE86532446D74E0096A18C /* TriggerAR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7DCE864F2446D74E0096A18C /* TriggerAR.mp3 */; };
+		7DCE86572446DCA00096A18C /* Tutorial3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7DCE86542446DC9F0096A18C /* Tutorial3.mp3 */; };
+		7DCE86582446DCA00096A18C /* Tutorial2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7DCE86552446DCA00096A18C /* Tutorial2.mp3 */; };
+		7DCE86592446DCA00096A18C /* Tutorial1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7DCE86562446DCA00096A18C /* Tutorial1.mp3 */; };
+		7DCE865B2446DD3F0096A18C /* Tutorial1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE865A2446DD3F0096A18C /* Tutorial1ViewController.swift */; };
+		7DCE865D2446DD730096A18C /* Tutorial2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE865C2446DD730096A18C /* Tutorial2ViewController.swift */; };
+		7DCE865F2446DDA30096A18C /* Tutorial3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE865E2446DDA30096A18C /* Tutorial3ViewController.swift */; };
+		7DCE8661244B75F10096A18C /* TutorialMovie.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7DCE8660244B75F10096A18C /* TutorialMovie.mov */; };
+		7DCE8663244BA6BD0096A18C /* PathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE8662244BA6BD0096A18C /* PathViewController.swift */; };
+		7DCE8665244BBE1F0096A18C /* Tutorial4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE8664244BBE1F0096A18C /* Tutorial4ViewController.swift */; };
+		7DCE8669244BBFDA0096A18C /* ExpIng1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7DCE8668244BBFDA0096A18C /* ExpIng1.mp3 */; };
+		7DCE866D244BC1220096A18C /* AboutApp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7DCE866C244BC1220096A18C /* AboutApp.mp3 */; };
+		7DCE866F244BD5FA0096A18C /* Congrats.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7DCE866E244BD5FA0096A18C /* Congrats.mp3 */; };
+		7DCE8671244BD6200096A18C /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE8670244BD6200096A18C /* CongratsViewController.swift */; };
+		7DF8CF2A244D0BE000258479 /* TrigARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF8CF29244D0BE000258479 /* TrigARViewController.swift */; };
+		7DF8CF2E244D14FF00258479 /* Tutorial4.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 7DF8CF2D244D14FE00258479 /* Tutorial4.rcproject */; };
+		7DF8CF30244D1AF700258479 /* Tutorial4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7DF8CF2F244D1AF600258479 /* Tutorial4.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D5CF78F24442734002CAA0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D5CF791244428C7002CAA0F /* DiscoverScene2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverScene2ViewController.swift; sourceTree = "<group>"; };
 		7D703E492419CD3400C498F3 /* ScienceForSeniors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScienceForSeniors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D703E4C2419CD3400C498F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D703E4E2419CD3400C498F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7D703E502419CD3400C498F3 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		7D703E4E2419CD3400C498F3 /* Experiment1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiment1ViewController.swift; sourceTree = "<group>"; };
 		7D703E532419CD3400C498F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7D703E552419CD3600C498F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D703E582419CD3600C498F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D703E5A2419CD3600C498F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D703E64241C921E00C498F3 /* LearnSciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSciViewController.swift; sourceTree = "<group>"; };
+		7D72E4932438FF5600F03668 /* DiscoverScene1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverScene1ViewController.swift; sourceTree = "<group>"; };
+		7D72E49D243920DD00F03668 /* GrayHairVideo2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = GrayHairVideo2.mp4; path = ../../../Downloads/GrayHairVideo2.mp4; sourceTree = "<group>"; };
+		7D72E49F243920E800F03668 /* GrayHairVideo1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = GrayHairVideo1.mp4; path = ../../../Downloads/GrayHairVideo1.mp4; sourceTree = "<group>"; };
+		7D72E4A12439331E00F03668 /* GrayHairVideo1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GrayHairVideo1.mp4; sourceTree = "<group>"; };
+		7D72E4A22439332000F03668 /* GrayHairVideo2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GrayHairVideo2.mp4; sourceTree = "<group>"; };
+		7D72E4A324394E8800F03668 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7D72E4A52439509F00F03668 /* AboutExp1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AboutExp1.mp3; sourceTree = "<group>"; };
+		7D72E4A72439595200F03668 /* HowToExp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HowToExp.mp3; sourceTree = "<group>"; };
+		7D72E4A9243964F400F03668 /* Learn1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Learn1.mp3; sourceTree = "<group>"; };
+		7D72E4AB2439650800F03668 /* Discover1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Discover1.mp3; sourceTree = "<group>"; };
+		7D842FAA241C9D07007F4E0B /* LearnSci1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = LearnSci1.rcproject; sourceTree = "<group>"; };
+		7D8845CF244BDFF500E0DBFE /* ExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewController.swift; sourceTree = "<group>"; };
+		7DA46876244CE2080061BB40 /* Tutorial1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Tutorial1.rcproject; sourceTree = "<group>"; };
+		7DA46878244D00360061BB40 /* Tutorial2.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Tutorial2.rcproject; sourceTree = "<group>"; };
+		7DA4687A244D085D0061BB40 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
+		7DA4D17F243AA81E00855DFB /* Experiment.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experiment.rcproject; sourceTree = "<group>"; };
+		7DCE864C2446D74E0096A18C /* AboutContent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AboutContent.mp3; sourceTree = "<group>"; };
+		7DCE864E2446D74E0096A18C /* AboutAR.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AboutAR.mp3; sourceTree = "<group>"; };
+		7DCE864F2446D74E0096A18C /* TriggerAR.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TriggerAR.mp3; sourceTree = "<group>"; };
+		7DCE86542446DC9F0096A18C /* Tutorial3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tutorial3.mp3; sourceTree = "<group>"; };
+		7DCE86552446DCA00096A18C /* Tutorial2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tutorial2.mp3; sourceTree = "<group>"; };
+		7DCE86562446DCA00096A18C /* Tutorial1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tutorial1.mp3; sourceTree = "<group>"; };
+		7DCE865A2446DD3F0096A18C /* Tutorial1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial1ViewController.swift; sourceTree = "<group>"; };
+		7DCE865C2446DD730096A18C /* Tutorial2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial2ViewController.swift; sourceTree = "<group>"; };
+		7DCE865E2446DDA30096A18C /* Tutorial3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial3ViewController.swift; sourceTree = "<group>"; };
+		7DCE8660244B75F10096A18C /* TutorialMovie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = TutorialMovie.mov; sourceTree = "<group>"; };
+		7DCE8662244BA6BD0096A18C /* PathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathViewController.swift; sourceTree = "<group>"; };
+		7DCE8664244BBE1F0096A18C /* Tutorial4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial4ViewController.swift; sourceTree = "<group>"; };
+		7DCE8668244BBFDA0096A18C /* ExpIng1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ExpIng1.mp3; path = ../../../Downloads/ExpIng1.mp3; sourceTree = "<group>"; };
+		7DCE866C244BC1220096A18C /* AboutApp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = AboutApp.mp3; path = ../../../Desktop/AboutApp.mp3; sourceTree = "<group>"; };
+		7DCE866E244BD5FA0096A18C /* Congrats.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Congrats.mp3; sourceTree = "<group>"; };
+		7DCE8670244BD6200096A18C /* CongratsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
+		7DF8CF29244D0BE000258479 /* TrigARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrigARViewController.swift; sourceTree = "<group>"; };
+		7DF8CF2D244D14FE00258479 /* Tutorial4.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Tutorial4.rcproject; sourceTree = "<group>"; };
+		7DF8CF2F244D1AF600258479 /* Tutorial4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tutorial4.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +126,59 @@
 		7D703E4B2419CD3400C498F3 /* ScienceForSeniors */ = {
 			isa = PBXGroup;
 			children = (
+				7D842FAA241C9D07007F4E0B /* LearnSci1.rcproject */,
 				7D703E4C2419CD3400C498F3 /* AppDelegate.swift */,
-				7D703E4E2419CD3400C498F3 /* ViewController.swift */,
-				7D703E502419CD3400C498F3 /* Experience.rcproject */,
+				7D703E64241C921E00C498F3 /* LearnSciViewController.swift */,
+				7DCE865A2446DD3F0096A18C /* Tutorial1ViewController.swift */,
+				7DCE865C2446DD730096A18C /* Tutorial2ViewController.swift */,
+				7DA46876244CE2080061BB40 /* Tutorial1.rcproject */,
+				7DA46878244D00360061BB40 /* Tutorial2.rcproject */,
+				7DCE865E2446DDA30096A18C /* Tutorial3ViewController.swift */,
+				7DCE8664244BBE1F0096A18C /* Tutorial4ViewController.swift */,
+				7DF8CF2D244D14FE00258479 /* Tutorial4.rcproject */,
+				7D72E4932438FF5600F03668 /* DiscoverScene1ViewController.swift */,
+				7DCE8662244BA6BD0096A18C /* PathViewController.swift */,
+				7D8845CF244BDFF500E0DBFE /* ExperienceViewController.swift */,
+				7D5CF791244428C7002CAA0F /* DiscoverScene2ViewController.swift */,
+				7D72E4A324394E8800F03668 /* BaseViewController.swift */,
+				7DCE8670244BD6200096A18C /* CongratsViewController.swift */,
+				7DF8CF29244D0BE000258479 /* TrigARViewController.swift */,
+				7DA4687A244D085D0061BB40 /* AboutAppViewController.swift */,
+				7D703E4E2419CD3400C498F3 /* Experiment1ViewController.swift */,
+				7DA4D17F243AA81E00855DFB /* Experiment.rcproject */,
 				7D703E522419CD3400C498F3 /* Main.storyboard */,
-				7D703E552419CD3600C498F3 /* Assets.xcassets */,
+				7D72E49D243920DD00F03668 /* GrayHairVideo2.mp4 */,
+				7D72E49F243920E800F03668 /* GrayHairVideo1.mp4 */,
+				7D72E4A72439595200F03668 /* HowToExp.mp3 */,
+				7D72E4A52439509F00F03668 /* AboutExp1.mp3 */,
+				7DCE866C244BC1220096A18C /* AboutApp.mp3 */,
+				7DCE866E244BD5FA0096A18C /* Congrats.mp3 */,
+				7DF8CF2F244D1AF600258479 /* Tutorial4.mp3 */,
+				7DCE8660244B75F10096A18C /* TutorialMovie.mov */,
+				7DCE86562446DCA00096A18C /* Tutorial1.mp3 */,
+				7DCE86552446DCA00096A18C /* Tutorial2.mp3 */,
+				7DCE86542446DC9F0096A18C /* Tutorial3.mp3 */,
+				7DCE864E2446D74E0096A18C /* AboutAR.mp3 */,
+				7DCE864C2446D74E0096A18C /* AboutContent.mp3 */,
+				7DCE864F2446D74E0096A18C /* TriggerAR.mp3 */,
+				7D72E4A9243964F400F03668 /* Learn1.mp3 */,
+				7D72E4AB2439650800F03668 /* Discover1.mp3 */,
+				7DCE8668244BBFDA0096A18C /* ExpIng1.mp3 */,
+				7D5CF78F24442734002CAA0F /* Assets.xcassets */,
+				7D72E4972439057D00F03668 /* Videos */,
 				7D703E572419CD3600C498F3 /* LaunchScreen.storyboard */,
 				7D703E5A2419CD3600C498F3 /* Info.plist */,
 			);
 			path = ScienceForSeniors;
+			sourceTree = "<group>";
+		};
+		7D72E4972439057D00F03668 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				7D72E4A22439332000F03668 /* GrayHairVideo2.mp4 */,
+				7D72E4A12439331E00F03668 /* GrayHairVideo1.mp4 */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +240,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D703E592419CD3600C498F3 /* LaunchScreen.storyboard in Resources */,
-				7D703E562419CD3600C498F3 /* Assets.xcassets in Resources */,
+				7DCE86582446DCA00096A18C /* Tutorial2.mp3 in Resources */,
+				7D72E49E243920DD00F03668 /* GrayHairVideo2.mp4 in Resources */,
+				7DF8CF30244D1AF700258479 /* Tutorial4.mp3 in Resources */,
+				7DCE866F244BD5FA0096A18C /* Congrats.mp3 in Resources */,
+				7D72E4A62439509F00F03668 /* AboutExp1.mp3 in Resources */,
+				7DCE86532446D74E0096A18C /* TriggerAR.mp3 in Resources */,
+				7D5CF79024442734002CAA0F /* Assets.xcassets in Resources */,
+				7DCE86502446D74E0096A18C /* AboutContent.mp3 in Resources */,
+				7DCE86592446DCA00096A18C /* Tutorial1.mp3 in Resources */,
+				7D72E4A0243920E800F03668 /* GrayHairVideo1.mp4 in Resources */,
+				7D72E4AC2439650800F03668 /* Discover1.mp3 in Resources */,
+				7DCE86572446DCA00096A18C /* Tutorial3.mp3 in Resources */,
 				7D703E542419CD3400C498F3 /* Main.storyboard in Resources */,
+				7DCE86522446D74E0096A18C /* AboutAR.mp3 in Resources */,
+				7D72E4AA243964F400F03668 /* Learn1.mp3 in Resources */,
+				7D72E4A82439595200F03668 /* HowToExp.mp3 in Resources */,
+				7DCE866D244BC1220096A18C /* AboutApp.mp3 in Resources */,
+				7DCE8661244B75F10096A18C /* TutorialMovie.mov in Resources */,
+				7DCE8669244BBFDA0096A18C /* ExpIng1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +269,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D703E4F2419CD3400C498F3 /* ViewController.swift in Sources */,
+				7DCE8665244BBE1F0096A18C /* Tutorial4ViewController.swift in Sources */,
+				7DA46879244D00360061BB40 /* Tutorial2.rcproject in Sources */,
+				7DA4687B244D085D0061BB40 /* AboutAppViewController.swift in Sources */,
+				7D703E4F2419CD3400C498F3 /* Experiment1ViewController.swift in Sources */,
+				7DA46877244CE2080061BB40 /* Tutorial1.rcproject in Sources */,
+				7DCE865D2446DD730096A18C /* Tutorial2ViewController.swift in Sources */,
 				7D703E4D2419CD3400C498F3 /* AppDelegate.swift in Sources */,
-				7D703E512419CD3400C498F3 /* Experience.rcproject in Sources */,
+				7DA4D180243AA81E00855DFB /* Experiment.rcproject in Sources */,
+				7D72E4942438FF5600F03668 /* DiscoverScene1ViewController.swift in Sources */,
+				7D72E4A424394E8800F03668 /* BaseViewController.swift in Sources */,
+				7D703E65241C921E00C498F3 /* LearnSciViewController.swift in Sources */,
+				7DF8CF2A244D0BE000258479 /* TrigARViewController.swift in Sources */,
+				7D842FAB241C9D07007F4E0B /* LearnSci1.rcproject in Sources */,
+				7DCE865F2446DDA30096A18C /* Tutorial3ViewController.swift in Sources */,
+				7DCE865B2446DD3F0096A18C /* Tutorial1ViewController.swift in Sources */,
+				7D5CF792244428C7002CAA0F /* DiscoverScene2ViewController.swift in Sources */,
+				7D8845D0244BDFF500E0DBFE /* ExperienceViewController.swift in Sources */,
+				7DF8CF2E244D14FF00258479 /* Tutorial4.rcproject in Sources */,
+				7DCE8663244BA6BD0096A18C /* PathViewController.swift in Sources */,
+				7DCE8671244BD6200096A18C /* CongratsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

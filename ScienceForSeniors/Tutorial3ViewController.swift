@@ -107,7 +107,6 @@ class Tutorial3ViewController: UIViewController, ARSCNViewDelegate {
     */
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        arTut3View.session.pause()
         arTut3View?.session.pause()
         arTut3View?.removeFromSuperview()
         arTut3View = nil

@@ -39,7 +39,16 @@ class Tutorial2ViewController: UIViewController {
         nextButton.isEnabled = false
         self.navigationItem.setHidesBackButton(true, animated: true);
         
-        Tutorial2.loadSceneAsync {result in
+        let tut2Anchor = try! Tutorial2.loadScene()
+        tut2Anchor.generateCollisionShapes(recursive: true)
+        
+        arTut2View.scene.anchors.append(tut2Anchor)
+        
+        self.Tut2 = tut2Anchor
+        
+        self.setupNotifyActions()
+        
+       /* Tutorial2.loadSceneAsync {result in
             switch result{
             case .success(let anchor):
                 let Tut2Anchor = anchor
@@ -56,7 +65,7 @@ class Tutorial2ViewController: UIViewController {
                 print(error)
                 return
             }
-        }
+        }*/
     }
     
     /**

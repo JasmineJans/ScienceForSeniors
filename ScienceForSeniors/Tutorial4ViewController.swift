@@ -33,6 +33,12 @@ class Tutorial4ViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         
+        let tut4Anchor = try! Tutorial4.loadScene()
+        tut4Anchor.generateCollisionShapes(recursive: true)
+        
+        arTut4View.scene.anchors.append(tut4Anchor)
+        self.Tut4 = tut4Anchor
+        /*
         Tutorial4.loadSceneAsync {result in
             switch result{
             case .success(let anchor):
@@ -48,7 +54,7 @@ class Tutorial4ViewController: UIViewController {
                 print(error)
                 return
             }
-        }
+        }*/
     }
     
     /**

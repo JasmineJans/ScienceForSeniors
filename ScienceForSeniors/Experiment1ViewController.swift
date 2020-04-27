@@ -70,7 +70,15 @@ class Experiment1ViewController: UIViewController {
     func loadYeastSteps(){
         //self.currentScene = "Yeast"
         
-        Experiment.loadYeastAsync {result in
+        
+        let yeastAnchor = try! Experiment.loadYeast()
+        yeastAnchor.generateCollisionShapes(recursive: true)
+        
+        arExperimentView.scene.anchors.append(yeastAnchor)
+        self.yeastSteps = yeastAnchor
+        
+        self.setupYeastNotifyActions()
+        /*Experiment.loadYeastAsync {result in
             switch result{
             case .success(let anchor):
                 let yeastAnchor = anchor
@@ -89,7 +97,7 @@ class Experiment1ViewController: UIViewController {
                 print(error)
                 return
             }
-        }
+        }*/
     }
     
     
@@ -99,7 +107,15 @@ class Experiment1ViewController: UIViewController {
     func loadSoapSteps(){
         print("in Soap scene")
         
-        Experiment.loadDishSoapAsync {result in
+        let soapAnchor = try! Experiment.loadDishSoap()
+        soapAnchor.generateCollisionShapes(recursive: true)
+        
+        arExperimentView.scene.anchors.append(soapAnchor)
+        self.soapSteps = soapAnchor
+        
+        self.setupSoapNotifyActions()
+        
+        /*Experiment.loadDishSoapAsync {result in
             switch result{
             case .success(let anchor):
                 let soapAnchor = anchor
@@ -119,7 +135,7 @@ class Experiment1ViewController: UIViewController {
                 print(error)
                 return
             }
-        }
+        }*/
     }
     
     /**
@@ -128,7 +144,15 @@ class Experiment1ViewController: UIViewController {
     func loadHPSteps(){
         self.currentScene = "HP"
         
-        Experiment.loadHydrogenPeroxideAsync {result in
+        
+        let hpAnchor = try! Experiment.loadHydrogenPeroxide()
+        hpAnchor.generateCollisionShapes(recursive: true)
+        
+        arExperimentView.scene.anchors.append(hpAnchor)
+        self.hpSteps = hpAnchor
+        
+        self.setupHPNotifyActions()
+        /*Experiment.loadHydrogenPeroxideAsync {result in
             switch result{
             case .success(let anchor):
                 let hpAnchor = anchor
@@ -147,7 +171,7 @@ class Experiment1ViewController: UIViewController {
                 print(error)
                 return
             }
-        }
+        }*/
     }
     
     /**

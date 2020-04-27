@@ -22,9 +22,15 @@ class Experiment1ViewController: UIViewController {
     var yeastSteps:Experiment.Yeast!
     var hpSteps:Experiment.HydrogenPeroxide!
     var FSteps:Experiment.FinalSteps!
+    var noAnchorSteps:Experiment.NoAnch!
     var end:Experiment.Finish!
     
     var currentScene:String!
+    
+    //CONSTANT THAT CONTORLS WHETHER OR NOT TO USE OBJECT RECOGNITION
+    //set to true if you do not have the exact ingredients for the experiment.
+    //set to false if you do hve the exact ingredint for the experiment.
+    var noAnchors:Bool = true
     
     //sets up the possible notify actions set up in the reality composer project
     var nextActions:Experiment.NotifyAction!
@@ -37,11 +43,15 @@ class Experiment1ViewController: UIViewController {
         self.NextButton.isEnabled = false
         self.NextButton.titleLabel?.textAlignment = NSTextAlignment.center
         
+        if(!noAnchors){
         //load the reality composer objects and anchors
-        self.loadYeastSteps()
-        self.loadSoapSteps()
-        self.loadHPSteps()
-        
+            self.loadYeastSteps()
+            self.loadSoapSteps()
+            self.loadHPSteps()
+        }
+        else{
+            self.loadNoAnchor()
+        }
         //set up the main button to be disabled with instructions
         self.NextButton.setTitle("Once loaded, tap the Yeast label for your first instructions", for: UIControl.State.disabled)
     }
@@ -63,6 +73,42 @@ class Experiment1ViewController: UIViewController {
         arExperimentView.removeFromSuperview()
         arExperimentView = nil
     }
+    
+    /**
+          Loads all  AR objects  labels for yeast, soap and hp when flag is set that there are not anchors.
+       */
+      func loadNoAnchor(){
+          self.currentScene = "NoAnchor"
+          
+          
+          let noAnchor = try! Experiment.loadNoAnch()
+          noAnchor.generateCollisionShapes(recursive: true)
+          
+          arExperimentView.scene.anchors.append(noAnchor)
+          self.noAnchorSteps = noAnchor
+          
+          self.setupNoAnchNotifyActions()
+          /*Experiment.loadYeastAsync {result in
+              switch result{
+              case .success(let anchor):
+                  let yeastAnchor = anchor
+                 
+                 // Load the "yeast" scene from the "Experiment" Reality File
+                  yeastAnchor.generateCollisionShapes(recursive: true)
+
+                  //add the yeast anchor to the screen
+                  self.arExperimentView.scene.anchors.append(yeastAnchor)
+
+                  self.yeastSteps = yeastAnchor
+                  
+                  self.setupYeastNotifyActions()
+                 
+              case .failure(let error):
+                  print(error)
+                  return
+              }
+          }*/
+      }
     
     /**
         Loads all the anchors and AR objects from the Yeast scene in the reality composer project file
@@ -234,6 +280,17 @@ class Experiment1ViewController: UIViewController {
     }
     
     /**
+          Connects the handwritten UI actions based off of the notifications sent from the reality composer project scenes.
+       */
+       func setupNoAnchNotifyActions(){
+        self.noAnchorSteps.actions.clickYeastLabel.onAction = self.showSoapHelpLabel(_:)
+        self.noAnchorSteps.actions.clickDishSoap.onAction = self.hideYeast(_:)
+        self.noAnchorSteps.actions.hideSoap.onAction = self.hideSoap(_:)
+        self.noAnchorSteps.actions.hideYeast.onAction = self.showHPHelpLabel(_:)
+        self.noAnchorSteps.actions.nextButton.onAction = self.nextButton(_:)
+       }
+    
+    /**
        Connects the handwritten UI actions based off of the notifications sent from the reality composer project scenes.
     */
     func setupYeastNotifyActions(){
@@ -268,7 +325,12 @@ class Experiment1ViewController: UIViewController {
        Sets up the handwritten UI action triggered by Reality Composer scene notification for showing the soap label.
     */
     func showSoapHelpLabel(_ entity: Entity?){
-        self.soapSteps.notifications.showSoapTapMe.post()
+        if(!noAnchors){
+            self.soapSteps.notifications.showSoapTapMe.post()
+        }
+        else{
+            self.noAnchorSteps.notifications.showSoapTapMe.post()
+        }
         self.NextButton.setTitle("Tap the Soap label for your second instructions", for: UIControl.State.disabled)
     }
     
@@ -276,7 +338,12 @@ class Experiment1ViewController: UIViewController {
        Sets up the handwritten UI action triggered by Reality Composer scene notification for showing the hyfrogen peroxide label.
     */
     func showHPHelpLabel(_ entity: Entity?){
-        self.hpSteps.notifications.showHPTapMe.post()
+        if(!noAnchors){
+            self.hpSteps.notifications.showHPTapMe.post()
+        }
+        else{
+            self.noAnchorSteps.notifications.showHPTapMe.post()
+        }
         self.NextButton.setTitle("Tap the Hydrogen Peroxide label for your second instructions", for: UIControl.State.disabled)
     }
     
@@ -284,21 +351,36 @@ class Experiment1ViewController: UIViewController {
        Sets up the handwritten UI action triggered by Reality Composer scene notification for hiding the yeast label.
     */
     func hideYeast(_ entity: Entity?){
-        self.yeastSteps.notifications.hideAllYeast.post()
+        if(!noAnchors){
+            self.yeastSteps.notifications.hideAllYeast.post()
+        }
+        else{
+            self.noAnchorSteps.notifications.hideAllYeast.post()
+        }
     }
     
     /**
        Sets up the handwritten UI action triggered by Reality Composer scene notification for hiding the soap label.
     */
     func hideSoap(_ entity: Entity?){
-        self.soapSteps.notifications.hideAllSoap.post()
+        if(!noAnchors){
+            self.soapSteps.notifications.hideAllSoap.post()
+        }
+        else{
+            self.noAnchorSteps.notifications.hideSoap.post()
+        }
     }
     
     /**
        Sets up the handwritten UI action triggered by Reality Composer scene notification for showing the Hydrogen peroxide label.
     */
     func hideHP(_ entity: Entity?){
-        self.hpSteps.notifications.hideAllHP.post()
+        if(!noAnchors){
+            self.hpSteps.notifications.hideAllHP.post()
+        }
+        else{
+            self.noAnchorSteps.notifications.hideHP.post()
+        }
     }
     
     /**
@@ -316,10 +398,17 @@ class Experiment1ViewController: UIViewController {
     @IBAction func nextScene(sender:UIButton){
         self.NextButton.isEnabled = false
         
-        if(currentScene == "HP"){
-            self.hpSteps.notifications.continueFinalSteps.post()
-            currentScene = "Finish"
-            self.loadFinalSteps()
+        if(currentScene == "HP" || currentScene == "NoAnchor"){
+            if(!noAnchors){
+                self.hpSteps.notifications.continueFinalSteps.post()
+                currentScene = "Finish"
+                self.loadFinalSteps()
+            }
+            else{
+                self.noAnchorSteps.notifications.continueFinalSteps.post()
+                currentScene = "Finish"
+                self.loadFinalSteps()
+            }
         }
         else if(currentScene == "Finish"){
             self.FSteps.notifications.finish.post()

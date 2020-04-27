@@ -55,9 +55,10 @@ This project is not licensed and was buit as a Proof of Concept for the EduTech 
 
 ## Acknowledgments
 
-* To Georgia OMSCS program EdTech course
+* Georgia Tech OMSCS program EdTech course for inspiring the project
 
-And to the following videos and tutorials:
+The following videos, projects and tutorials:
+* https://developer.apple.com/documentation/arkit/scanning_and_detecting_3d_objects
 * https://developer.apple.com/augmented-reality/
 * https://www.youtube.com/watch?v=2bGa4bhOHeY
 * https://www.youtube.com/watch?v=3FKzSYAGfJ0
